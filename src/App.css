@@ -1,6 +1,6 @@
 html {
   background-color: var(--main-bg-color);
-
+  color: var(--main-color) ;
 }
 
 :root{
@@ -20,7 +20,7 @@ html {
   margin-top: 30vh;
   margin-left: 33vw;
   border-radius: 190px 10px;
-  box-shadow: 0 0 5px 0px var(--shadow);
+  box-shadow: 0 10px 15px 0px var(--shadow);
 }
 
 #text{
@@ -32,5 +32,42 @@ html {
   text-align: center;
   padding: 1rem;
 
+}
+#new-quote{
+  width: fit-content;
+  margin: 3em auto;
+}
+.new-quote {
+  font-size: 1.2em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px outset black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px 180px;
+  z-index:1;
+  box-shadow: 0 5px 5px 0px var(--shadow);
+  right: 0px;
+}
+
+.new-quote::after {
+  content: "";
+  background-color: var(--main-bg-color);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 0.5em;
+  left: 0.5em;
+  border-radius: 10px 180px;
+  transition: 0.2s;
+}
+
+.new-quote:hover::after {
+  top: 0px;
+  left: 0px;
 }
 
