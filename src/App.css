@@ -1,6 +1,6 @@
 html {
   background-color: var(--main-bg-color);
-
+  color: var(--main-color) ;
 }
 
 :root{
@@ -15,22 +15,77 @@ html {
 }
 #quote-box{
   background-color: var(--main-square-color);
-  width: 35vw;
-  height: 20vw;
+  width: 40vw;
+  height: 30vw;
   margin-top: 30vh;
-  margin-left: 33vw;
+  margin-left: 30vw;
   border-radius: 190px 10px;
-  box-shadow: 0 0 5px 0px var(--shadow);
+  box-shadow: 0 10px 15px 0px var(--shadow);
 }
 
 #text{
   color: var(--main-bg-color);
-  font-size: 1.5em;
+  font-size: calc(1.5em);
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  margin: 3rem;
+  font-weight: 500;
+  margin: 2rem;
   text-align: center;
-  padding: 1rem;
-
+  padding: 3rem;
 }
 
+#author{
+  color: var(--main-bg-color);
+  font-size: calc(1em);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 1rem;
+  padding: auto;
+  /* margin: 4rem;
+  text-align: center;
+  padding: 3rem; */
+}
+#new-quote{
+  position: static;
+  width: fit-content;
+  margin: 3em;
+}
+.new-quote {
+  font-size: 1.2em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px outset black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(245, 234, 234, 0);
+  border-radius: 10px 180px;
+  z-index:1;
+  box-shadow: 0 5px 5px 0px var(--shadow);
+  right: 0px;
+  color: aliceblue;
+}
+
+.new-quote::after {
+  content: "";
+  background-color: var(--main-bg-color);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 0.5em;
+  left: 0.5em;
+  border-radius: 10px 180px;
+  transition: 0.2s;
+}
+
+.new-quote:hover::after {
+  top: 0px;
+  left: 0px;
+}
+
+#tweet{
+  position: absolute;
+  width: fit-content;
+  margin: 3em auto;
+}
